@@ -1,0 +1,220 @@
+body {
+    background-color: hsl(240, 78%, 98%);
+    background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+    background-position: top right, bottom left;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 280px;
+    margin-top: 40px;
+    font-family: 'Montserrat';
+    text-align: center;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    top: -5px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px black;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .pricing {
+    font-size: 23px;
+    color: grey;
+    margin-top: 41px;
+    margin-bottom: 67px;
+}
+  .container {
+      display: flex;
+      justify-content: center;
+      margin-top:35px;
+  }
+
+  .basic {
+    background-color: white;
+    padding: 30px 86px 30px 60px;
+    border-radius: 10px;
+    color: hsl(232, 13%, 33%);
+    margin-bottom: 50px;
+    width: 175px;
+  }
+  .basic:hover,.professional:hover,.master:hover {
+    -ms-transform: scale(1.2);
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    transform: scale(1.01);
+    cursor: pointer;
+    box-shadow: 0 0 5px hsl(228, 12%, 44%);
+}
+  .professional {
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    padding: 30px 86px 30px 70px;
+    border-radius: 10px;
+    margin-top: -17px;
+    margin-bottom: 30px;
+    color: white;
+    width: 175px;
+  }
+  .master {
+        background-color: white;
+        padding: 30px 86px 30px 60px;
+        border-radius: 10px;
+        color: hsl(232, 13%, 33%);
+        margin-bottom: 50px;
+        width: 175px;
+  }
+
+  #basic-text, #master-text, #prof-text {
+      font-size: 60px;
+  }
+
+  hr {
+    width: 130%;
+    margin-left: -25px;
+    border-top: 1px solid #ccc;
+}
+
+.professional hr {
+    margin-right: 25px;
+    margin-left: -40px;
+    width: 140%;
+    border-top: 1px solid white;
+}
+button {
+  margin-top: 20px;
+    margin-left: -21px;
+    width: 127%;
+    font-size: 16px;
+    padding: 14px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    cursor: pointer;
+}
+
+button:hover {
+  background: white;
+  color: hsl(237, 63%, 64%);
+border: 1px solid hsl(237, 63%, 64%);
+}
+.prof-button {
+  width: 134%;
+  border: 1px solid hsl(236, 72%, 79%);
+  background: white;
+  margin-left: -36px;
+  color: hsl(237, 63%, 64%);
+}
+.prof-button:hover{
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border: 1px solid white;
+  color: white;
+}
+input:checked + .slider:hover{
+  background:  hsl(240, 7%, 8%),;
+}
+p {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+button:focus{
+  outline: none;
+}
+.attribution { 
+  margin-top: 39px;
+  font-size: 20px;
+   text-align: center; 
+  }
+.attribution a { 
+  color: hsl(228, 45%, 44%);
+ }
+@media screen and (max-width: 600px) {
+    body {
+      background-size: 80px;
+    }
+  .container{
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit minmax(300px 1fr));
+    
+  }
+  .basic, .professional, .master {
+    width: 250px;
+    padding: 0;
+  }
+  hr, .professional hr {
+    width: 83%;
+    margin-left: 19px;
+}
+button, .prof-button {
+  width: 81%;
+  margin-left: 0;
+  margin-bottom: 18px;
+}
+#basic-text, #master-text, #prof-text {
+  font-size: 37px;
+}
+.basic {
+margin-top: -20px;
+}
+.container h1 {
+  font-size: 18px;
+  margin-top: 22px;
+}
+.attribution {
+  margin-top: 5px;
+  font-size: 13px;
+}
+}

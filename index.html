@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Montserrat">
+  <title>Frontend Mentor | Pricing Component with toggle master</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+<body>
+  <section>
+  <div>
+    <h1>Our Pricing</h1>
+  </div>
+   
+  <div class="pricing">
+    <label class="annually">Annually</label>
+    <label class="switch">
+      <input type="checkbox"  onclick="myFunction()">
+      <span class="slider round"></span>
+    </label>
+    <input type="hidden" id="switched" value="monthly">
+    <label class="monthly">Monthly</label>
+  </div>
+
+<!--toggle-->
+<div class="container">
+  
+  <div class="basic">
+      <h1> Basic</h1>
+      <h1 id="basic-text">$199.99</h1>
+      <hr class="first-hr">
+      <p>500 GB Storage</p>
+      <hr>
+      <p>2 Users Allowed</p>
+      <hr>
+      <p>Send up to 3GB</p>
+      <hr>
+      <button>LEARN MORE</button>
+  </div>
+
+  <div class="professional">
+      <h1> Professional</h1>
+      <h1 id="prof-text"> $249.99</h1>
+      <hr class="first-hr">
+      <p>1TB Storage</p>
+      <hr>
+      <p>5 Users Allowed</p>
+      <hr>
+      <p>Send up to 10GB</p>
+      <hr>
+      <button class="prof-button">LEARN MORE</button>
+  </div>
+
+  <div class="master">
+      <h1> Master</h1>
+      <h1 id="master-text"> $399.99</h1>
+      <hr class="first-hr">
+      <p>2TB Storage</p>
+      <hr>
+      <p>10 Users Allowed</p>
+      <hr>
+      <p>Send up to 20GB</p>
+      <hr>
+      <button>LEARN MORE</button>
+  </div>
+
+
+</section>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Favour Chibueze</a>.
+  </div>
+
+<script src="main.js"></script>
+</body>
+</html>
